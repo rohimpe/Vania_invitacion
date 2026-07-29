@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Estás invitada — Despedida de Vania</title>
+<title>Estás invitad@ — Despedida de Vania</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -34,9 +34,24 @@
 
       <p class="texto-final-fiesta">¡Nos vemos ahí! 💛</p>
 
+      <button id="btn-ver-ubicacion" type="button" class="btn-dorado btn-ver-ubicacion">📍 Ver ubicación</button>
       <a href="ranking.html" class="btn-dorado btn-ver-ranking">🏆 Ver ranking</a>
     </div>
   </section>
+
+  <div id="modal-ubicacion" class="modal-ubicacion oculto">
+    <div class="modal-contenido">
+      <button id="btn-cerrar-mapa" type="button" class="btn-cerrar-modal">✕</button>
+      <a class="link-abrir-maps" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Morococha+135,+Lima+15024">
+        Abrir en Maps ↗
+      </a>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396.5062681514528!2d-76.94958858126546!3d-12.074857401282227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e466599591%3A0xf0528ea837544e8f!2sMorococha%20135%2C%20Lima%2015024!5e1!3m2!1ses!2spe!4v1785312203668!5m2!1ses!2spe"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
 
   <script>window.CANCION_PERSONALIZADA = 'assets/musica/67.mp3';</script>
   <script src="musica.js"></script>

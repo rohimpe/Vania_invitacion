@@ -33,3 +33,22 @@ FOTOS_COLLAGE.forEach((foto, indice) => {
   contenedor.appendChild(img);
   collage.appendChild(contenedor);
 });
+
+/* ============================================================
+   Modal de ubicación
+============================================================ */
+const modalUbicacion = document.getElementById('modal-ubicacion');
+const btnVerUbicacion = document.getElementById('btn-ver-ubicacion');
+const btnCerrarMapa = document.getElementById('btn-cerrar-mapa');
+
+btnVerUbicacion.addEventListener('click', () => {
+  modalUbicacion.classList.remove('oculto');
+});
+
+btnCerrarMapa.addEventListener('click', () => {
+  modalUbicacion.classList.add('oculto');
+});
+
+modalUbicacion.addEventListener('click', (e) => {
+  if(e.target === modalUbicacion) modalUbicacion.classList.add('oculto');
+});

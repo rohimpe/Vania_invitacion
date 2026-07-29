@@ -833,6 +833,69 @@ body::before{
   text-align: center;
 }
 
+.btn-ver-ubicacion{
+  margin-bottom: 10px;
+}
+
+/* ---- Modal de ubicación ---- */
+.modal-ubicacion{
+  position: fixed;
+  inset: 0;
+  background: rgba(15,10,10,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 200;
+}
+
+.modal-contenido{
+  background: var(--blanco);
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  padding: 16px;
+  position: relative;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
+}
+
+.btn-cerrar-modal{
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: var(--rojo-cornell);
+  color: var(--blanco);
+  border: 2px solid var(--blanco);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-abrir-maps{
+  display: block;
+  margin-bottom: 10px;
+  color: var(--rojo-cornell);
+  font-family: var(--fuente-display);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.modal-contenido iframe{
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 6px;
+  display: block;
+}
+
 @media (min-width: 420px){
   .collage-fotos{ height: 400px; }
 }
