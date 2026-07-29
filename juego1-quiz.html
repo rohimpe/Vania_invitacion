@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Quiz Lima — Rumbo a Cornell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="pantalla-juego" class="pantalla activa">
+    <div class="contenedor-juego">
+
+      <header class="cabecera-juego">
+        <p class="eyebrow">ESCALA 1 · LIMA 🇵🇪</p>
+        <h1 class="titulo-juego">¿Qué tanto sabes de ti misma?</h1>
+        <div class="barra-progreso" id="barra-progreso"></div>
+      </header>
+
+      <div class="tarjeta-pregunta" id="tarjeta-pregunta">
+        <!-- se llena por JS -->
+      </div>
+
+      <button class="btn-dorado btn-siguiente" id="btn-siguiente" disabled>Siguiente</button>
+    </div>
+  </section>
+
+  <section id="pantalla-resultado" class="pantalla">
+    <div class="tarjeta-boarding tarjeta-resultado">
+      <p class="eyebrow" id="resultado-eyebrow">RESULTADO</p>
+      <div class="resultado-emoji" id="resultado-emoji">🎉</div>
+      <h1 class="titulo-principal resultado-titulo" id="resultado-titulo">¡Pasaste!</h1>
+      <p class="resultado-puntaje" id="resultado-puntaje">4 / 5 puntos</p>
+      <p class="subtexto" id="resultado-mensaje">Necesitabas mínimo 3 puntos para avanzar a New York.</p>
+      <button class="btn-dorado" id="btn-continuar">Continuar</button>
+    </div>
+  </section>
+
+  <script src="progreso.js"></script>
+  <script src="juego1-quiz.js"></script>
+</body>
+</html>

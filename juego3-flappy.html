@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Vuelo a Cornell — Rumbo a Cornell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="pantalla-juego" class="pantalla activa">
+    <div class="contenedor-juego contenedor-flappy">
+      <header class="cabecera-juego">
+        <p class="eyebrow">AYUDA A VANIA A TERMINAR SU VUELO!!!</p>
+        <h1 class="titulo-juego">Último vuelo</h1>
+        <p class="subtexto-flappy">Toca la pantalla (o Espacio) para volar. Necesitas 5 puntos.</p>
+      </header>
+
+      <div class="lienzo-wrapper" id="lienzo-wrapper">
+        <canvas id="lienzo-flappy" width="360" height="480"></canvas>
+
+        <div class="overlay-puntaje">
+          <span id="puntaje-actual">0</span>
+        </div>
+
+        <div class="overlay-inicio" id="overlay-inicio">
+          <p class="overlay-titulo">Toca para volar ✈️</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pantalla-resultado" class="pantalla">
+    <div class="tarjeta-boarding tarjeta-resultado">
+      <p class="eyebrow">RESULTADO</p>
+      <div class="resultado-emoji" id="resultado-emoji">🎓</div>
+      <h1 class="titulo-principal resultado-titulo" id="resultado-titulo">¡Llegaste a Cornell!</h1>
+      <p class="resultado-puntaje" id="resultado-puntaje">8 puntos</p>
+      <p class="subtexto" id="resultado-mensaje">Superaste el mínimo de 7 puntos.</p>
+      <button class="btn-dorado" id="btn-continuar">Continuar</button>
+    </div>
+  </section>
+
+  <script>window.CANCION_PERSONALIZADA = 'assets/musica/superestrella.mp3';</script>
+  <script src="musica.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="progreso.js"></script>
+  <script src="supabase.js"></script>
+  <script src="juego3-flappy.js"></script>
+</body>
+</html>

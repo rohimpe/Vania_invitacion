@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Memoria New York — Rumbo a Cornell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="pantalla-juego" class="pantalla activa">
+    <div class="contenedor-juego contenedor-memoria">
+
+      <header class="cabecera-juego">
+        <p class="eyebrow">NUNCA OLVIDES A VANIA!!!</p>
+        <h1 class="titulo-juego">Memorias inolvidables</h1>
+        <div class="marcadores-memoria">
+          <span class="marcador"><strong id="marcador-pares">0</strong> pares</span>
+          <span class="marcador"><strong id="marcador-intentos">14</strong> intentos</span>
+        </div>
+      </header>
+
+      <div class="tablero-memoria" id="tablero-memoria">
+        <!-- cartas generadas por JS -->
+      </div>
+    </div>
+  </section>
+
+  <section id="pantalla-resultado" class="pantalla">
+    <div class="tarjeta-boarding tarjeta-resultado">
+      <p class="eyebrow">RESULTADO</p>
+      <div class="resultado-emoji" id="resultado-emoji">🎉</div>
+      <div class="video-resultado-wrapper oculto" id="video-wrapper">
+        <video id="video-resultado" class="video-resultado" playsinline></video>
+        <button id="btn-play-video" class="btn-play-video oculto" aria-label="Reproducir video">▶</button>
+      </div>
+      <h1 class="titulo-principal resultado-titulo" id="resultado-titulo">¡Pasaste!</h1>
+      <p class="resultado-puntaje" id="resultado-puntaje">5 pares encontrados</p>
+      <p class="subtexto" id="resultado-mensaje">Necesitabas mínimo 3 pares para avanzar a Cornell.</p>
+      <button class="btn-dorado" id="btn-continuar">Continuar</button>
+    </div>
+  </section>
+
+  <script>window.CANCION_PERSONALIZADA = 'assets/musica/festival.mp3';</script>
+  <script src="musica.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="progreso.js"></script>
+  <script src="supabase.js"></script>
+  <script src="juego2-memoria.js"></script>
+</body>
+</html>
