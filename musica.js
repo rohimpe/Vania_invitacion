@@ -30,12 +30,17 @@
   function intentarReproducir(){
     if(estaSilenciada()) return;
     audio.play().catch(() => {
-      // El navegador bloqueó el autoplay: se activará con el primer click
-      const activarConClick = () => {
-        if(!estaSilenciada()) audio.play().catch(() => {});
-        document.removeEventListener('click', activarConClick);
+      // El navegador bloqueó el autoplay: reintenta con cualquier toque/click
+      // hasta que realmente logre sonar (antes se rendía en el primer intento).
+      const activarConInteraccion = () => {
+        if(estaSilenciada()) return;
+        audio.play().then(() => {
+          document.removeEventListener('click', activarConInteraccion);
+          document.removeEventListener('touchend', activarConInteraccion);
+        }).catch(() => { /* sigue esperando el próximo toque */ });
       };
-      document.addEventListener('click', activarConClick);
+      document.addEventListener('click', activarConInteraccion);
+      document.addEventListener('touchend', activarConInteraccion, { passive: true });
     });
   }
 
