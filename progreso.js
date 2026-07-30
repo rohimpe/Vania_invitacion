@@ -46,5 +46,5 @@ const Progreso = {
 /* Puntajes mínimos para desbloquear el siguiente nivel */
 const PUNTAJE_MINIMO = {
   nivel1: 3, // memoria (pares)
-  nivel2: 2  // flappy bird (obstáculos)
+  nivel2: 1  // flappy bird (obstáculos)
 };
